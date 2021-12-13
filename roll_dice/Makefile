@@ -1,0 +1,29 @@
+NAME	= roll
+
+LIB		= -L /Users/lugonzal/Cursus_42/code_challenge -lft
+INC		= -I /Users/lugonzal/Cursus_42/code_challenge/libft/inc
+CC		= clang
+CFLAGS	= -Wall -Werror -Wextra -fsanitize=address -g3
+
+FILES= main \
+
+OBJS= $(addsuffix .o, $(FILES))
+SRCS= $(addsuffix .c, $(FILES))
+
+.c.o:
+	$(CC) $(CFLAGS) $(INC) -c $^ -o $@
+
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIB)
+
+re: fclean all
+
+clean:
+	$(RM) $(OBJS)
+
+fclean: clean
+	$(RM) $(PART)
+
+.PHONY: all clean fclean re
