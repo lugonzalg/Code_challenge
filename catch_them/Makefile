@@ -1,4 +1,4 @@
-NAME	= roll
+NAME	= catch
 
 LIB		= -L $(PWD)/libft -lft
 INC		= -I $(PWD)/libft/inc
