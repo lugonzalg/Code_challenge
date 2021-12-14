@@ -6,6 +6,7 @@ CC		= clang
 CFLAGS	= -Wall -Werror -Wextra -fsanitize=address -g3
 
 FILES= main \
+	   find
 
 OBJS= $(addsuffix .o, $(FILES))
 SRCS= $(addsuffix .c, $(FILES))
